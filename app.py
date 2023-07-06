@@ -91,6 +91,7 @@ def build_model(df):
     st.markdown(imagedownload(plt, 'plot-calculation-time-wide.pdf'), unsafe_allow_html=True)
 
 def filedownload(df, filename):
+    # pass
     csv = df.to_csv(index=False)
     b64 = base64.b64encode(csv.encode()).decode()  # strings <-> bytes conversions
     href = f'<a href="data:file/csv;base64,{b64}" download={filename}>Download {filename} File</a>'
@@ -98,6 +99,7 @@ def filedownload(df, filename):
 
 
 def imagedownload(plt, filename):
+    # pass
     s = io.BytesIO()
     plt.savefig(s, format='pdf', bbox_inches='tight')
     plt.close()
