@@ -55,7 +55,7 @@ def build_model(df):
         plt.figure(figsize=(9, 3))
         sns.set_theme(style="whitegrid")
         ax1 = sns.barplot(x=predictions_test.index, y="R-Squared", data=predictions_test)
-        ax1.set(ylim=(0, 1))
+        ax1.set(ylim=(-10, 10))
         plt.xticks(rotation=90)
 
         st.pyplot(plt)
