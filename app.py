@@ -114,9 +114,10 @@ st.write("""
 # The Machine Learning Algorithm Comparison App
 We compare different machine learning algorithms on a dataset
 """)
-with st.sidebar.header('1. Upload your CSV data'):
+with st.sidebar:
     st.image('https://img.freepik.com/free-photo/ai-technology-brain-background-digital-transformation-concept_53876-124672.jpg?q=10&h=200')
     st.title("Auto-Machine-Learning")
+with st.sidebar.header('1. Upload your CSV data'):
     uploaded_file = st.sidebar.file_uploader("Upload your input CSV file", type=["csv"])
 with st.sidebar.header('2. Set Parameters'):
     split_size = st.sidebar.slider('Data split ratio (% for Training Set)', 10, 90, 80, 5)
